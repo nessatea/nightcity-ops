@@ -1,0 +1,205 @@
+:root {
+  --bg: #08080d;
+  --bg-soft: #0d0f18;
+  --panel: #11131f;
+  --panel-2: #171a29;
+  --line: #2a2f44;
+  --line-hot: #46516f;
+  --text: #ececf6;
+  --muted: #8a91a8;
+  --dim: #5b6278;
+  --yellow: #fcee0a;
+  --cyan: #00e5ff;
+  --magenta: #ff2e7e;
+  --green: #42e8a4;
+  --red: #ff4566;
+  --shadow: 0 18px 40px rgba(0, 0, 0, .34);
+  --font-display: "Chakra Petch", system-ui, sans-serif;
+  --font-mono: "Share Tech Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(0, 229, 255, .026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, .026) 1px, transparent 1px),
+    radial-gradient(circle at 18% 0%, rgba(255, 46, 126, .14), transparent 34rem),
+    radial-gradient(circle at 88% 100%, rgba(0, 229, 255, .11), transparent 34rem),
+    var(--bg);
+  background-size: 36px 36px, 36px 36px, auto, auto, auto;
+  color: var(--text);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto 14px;
+  max-width: 1440px;
+}
+
+.topbar-row {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.brand {
+  line-height: 1;
+}
+
+.brand b {
+  color: var(--yellow);
+  display: block;
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 14px rgba(252, 238, 10, .45);
+}
+
+.brand span {
+  color: var(--muted);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.wallet-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.wallet-strip span {
+  background: rgba(4, 6, 12, .74);
+  border: 1px solid rgba(0, 229, 255, .22);
+  min-width: 88px;
+  padding: 10px 12px;
+  text-align: right;
+}
+
+.wallet-strip b,
+.wallet-strip small {
+  display: block;
+}
+
+.wallet-strip b {
+  color: var(--cyan);
+  font-size: 22px;
+}
+
+.wallet-strip small {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+}
+
+.tab,
+.btn {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  min-height: 38px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+.tab.is-active,
+.btn.primary {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: #101018;
+  font-weight: 700;
+}
+
+.btn.danger {
+  border-color: rgba(255, 69, 102, .55);
+  color: var(--red);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+
+.app-main {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.panel-title {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 8px;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.panel-title::before {
+  background: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 229, 255, .5);
+  content: "";
+  height: 8px;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 780px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .topbar-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .wallet-strip {
+    margin-left: 0;
+  }
+}

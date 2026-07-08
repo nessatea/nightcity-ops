@@ -1,0 +1,535 @@
+.apartment-hub {
+  display: grid;
+  gap: 16px;
+}
+
+.apartment-hero {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, .13), transparent 34%),
+    linear-gradient(315deg, rgba(255, 46, 126, .14), transparent 36%),
+    rgba(13, 15, 25, .96);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  min-height: 118px;
+  padding: 18px;
+}
+
+.event-banner {
+  display: none;
+}
+
+.event-banner p {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.event-banner b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.event-banner {
+  background: rgba(5, 7, 13, .72);
+  border: 1px solid rgba(255, 255, 255, .1);
+  padding: 12px 14px;
+}
+
+.event-banner.tone-good {
+  border-color: rgba(66, 232, 164, .4);
+}
+
+.event-banner.tone-good b {
+  color: var(--green);
+}
+
+.event-banner.tone-bad {
+  border-color: rgba(255, 69, 102, .4);
+}
+
+.event-banner.tone-bad b {
+  color: var(--red);
+}
+
+.event-banner.tone-neutral b {
+  color: var(--cyan);
+}
+
+.apartment-hero h1,
+.panel-title {
+  margin: 0;
+}
+
+.apartment-hero h1 {
+  color: var(--yellow);
+  font-size: clamp(24px, 4vw, 42px);
+  letter-spacing: 0;
+}
+
+.apartment-hero p,
+.market-card p,
+.visitor-profile p,
+.rating-card p {
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 6px 0 0;
+}
+
+.market-card span,
+.visitor-card span,
+.visitor-card small,
+.visitor-profile small {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.apartment-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(360px, 1fr) minmax(280px, 360px);
+}
+
+.apartment-panel {
+  background: linear-gradient(180deg, rgba(17, 19, 31, .98), rgba(8, 9, 16, .98));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  min-width: 0;
+  padding: 14px;
+}
+
+.panel-title {
+  color: var(--cyan);
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+
+.market-list,
+.slot-grid,
+.visitor-list,
+.vibe-grid,
+.owned-collection,
+.equip-options {
+  display: grid;
+  gap: 10px;
+}
+
+.market-list {
+  max-height: calc(100vh - 250px);
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.market-card {
+  align-items: center;
+  background: rgba(5, 7, 13, .74);
+  border: 1px solid rgba(255, 255, 255, .08);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 72px 1fr;
+  padding: 10px;
+}
+
+.market-card.is-owned {
+  border-color: rgba(0, 229, 255, .24);
+}
+
+.item-icon {
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(0, 229, 255, .22), transparent 54%),
+    linear-gradient(135deg, rgba(255, 46, 126, .22), rgba(0, 0, 0, .18));
+  border: 1px solid rgba(0, 229, 255, .22);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, .35), 0 10px 18px rgba(0, 0, 0, .22);
+  display: flex;
+  font-size: 34px;
+  height: 64px;
+  justify-content: center;
+  line-height: 1;
+  width: 72px;
+}
+
+.item-icon.small {
+  font-size: 30px;
+  height: 58px;
+  width: 64px;
+}
+
+.market-card b,
+.slot-head b,
+.equipped-card span,
+.visitor-card b,
+.visitor-profile b {
+  color: var(--text);
+  display: block;
+}
+
+.market-card .btn {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+}
+
+.vibe-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.vibe-pills small {
+  background: rgba(0, 229, 255, .08);
+  border: 1px solid rgba(0, 229, 255, .16);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 6px;
+  text-transform: uppercase;
+}
+
+.btn,
+.slot-head button,
+.equip-options button,
+.visitor-card {
+  background: rgba(8, 10, 18, .9);
+  border: 1px solid var(--line);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn {
+  min-height: 38px;
+  padding: 9px 12px;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, rgba(255, 46, 126, .9), rgba(0, 229, 255, .82));
+  border-color: rgba(255, 255, 255, .2);
+  color: #06070c;
+  font-weight: 800;
+}
+
+.btn:disabled {
+  color: var(--muted);
+  cursor: default;
+  opacity: .78;
+}
+
+.apartment-home {
+  display: grid;
+  gap: 14px;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+.slot-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.housing-card,
+.equip-slot {
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, .06), transparent 35%),
+    rgba(5, 7, 13, .68);
+  border: 1px solid rgba(255, 255, 255, .08);
+  min-height: 190px;
+  padding: 10px;
+}
+
+.housing-card {
+  border-color: rgba(252, 238, 10, .22);
+  min-height: 74px;
+}
+
+.housing-card span,
+.housing-card small {
+  color: var(--muted);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.housing-card b {
+  color: var(--yellow);
+  display: block;
+  font-size: 22px;
+  margin: 3px 0;
+}
+
+.owned-collection {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.owned-chip {
+  align-items: center;
+  background: rgba(4, 6, 12, .66);
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 8px;
+}
+
+.owned-chip b {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.slot-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 28px;
+}
+
+.slot-head b {
+  color: var(--yellow);
+  text-transform: capitalize;
+}
+
+.slot-head button {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 7px;
+  text-transform: uppercase;
+}
+
+.equipped-card {
+  align-items: center;
+  background: rgba(0, 0, 0, .24);
+  border: 1px solid rgba(255, 255, 255, .06);
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 80px 1fr;
+  margin: 8px 0;
+  min-height: 82px;
+  padding: 8px;
+}
+
+.empty-slot {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.equip-options {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.equip-options button {
+  color: var(--muted);
+  min-height: 34px;
+  padding: 7px;
+}
+
+.equip-options button.on {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 14px rgba(0, 229, 255, .14);
+}
+
+.equip-options small {
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.vibe-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.vibe-score-card,
+.vibe-meter {
+  background: rgba(4, 6, 12, .72);
+  border: 1px solid rgba(255, 255, 255, .08);
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.vibe-score-card {
+  border-color: rgba(252, 238, 10, .24);
+  min-height: 58px;
+}
+
+.vibe-meter {
+  min-height: 46px;
+}
+
+.vibe-score-card span,
+.vibe-score-card b,
+.vibe-meter span,
+.vibe-meter b {
+  position: relative;
+  z-index: 1;
+}
+
+.vibe-score-card span,
+.vibe-meter span {
+  color: var(--muted);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.vibe-score-card b,
+.vibe-meter b {
+  color: var(--text);
+}
+
+.vibe-score-card b {
+  color: var(--yellow);
+  font-size: 26px;
+}
+
+.vibe-score-card i,
+.vibe-meter i {
+  background: linear-gradient(90deg, rgba(255, 46, 126, .36), rgba(0, 229, 255, .32));
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.visitor-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.affinity-summary {
+  background: rgba(4, 6, 12, .58);
+  border: 1px solid rgba(255, 255, 255, .08);
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+}
+
+.affinity-summary span,
+.affinity-summary small {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.affinity-summary small {
+  display: flex;
+  justify-content: space-between;
+  text-transform: none;
+}
+
+.affinity-summary b {
+  color: var(--text);
+}
+
+.visitor-card {
+  padding: 10px;
+  text-align: left;
+}
+
+.visitor-card.on,
+.visitor-card:hover,
+.market-card:hover,
+.slot-head button:hover,
+.equip-options button:hover {
+  border-color: var(--magenta);
+  box-shadow: 0 0 18px rgba(255, 46, 126, .14);
+}
+
+.visitor-card small {
+  display: block;
+  line-height: 1.35;
+  margin-top: 8px;
+  text-transform: none;
+}
+
+.visitor-profile,
+.rating-card {
+  background: rgba(5, 7, 13, .72);
+  border: 1px solid rgba(255, 255, 255, .08);
+  padding: 12px;
+}
+
+.visitor-profile b {
+  color: var(--yellow);
+  font-size: 18px;
+}
+
+.affinity-bar {
+  background: rgba(255, 255, 255, .08);
+  height: 8px;
+  margin: 12px 0 6px;
+  overflow: hidden;
+}
+
+.affinity-bar i {
+  background: linear-gradient(90deg, var(--magenta), var(--cyan));
+  display: block;
+  height: 100%;
+}
+
+.invite-btn {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.rating-card span {
+  color: var(--cyan);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.rating-card b {
+  color: var(--yellow);
+  display: block;
+  margin-top: 10px;
+}
+
+.rating-card.tier-loved {
+  border-color: rgba(0, 229, 255, .42);
+}
+
+.rating-card.tier-liked {
+  border-color: rgba(252, 238, 10, .38);
+}
+
+.rating-card.tier-disliked {
+  border-color: rgba(255, 46, 126, .42);
+}
+
+@media (max-width: 1120px) {
+  .apartment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-list {
+    max-height: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .apartment-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .slot-grid,
+  .vibe-grid {
+    grid-template-columns: 1fr;
+  }
+}
