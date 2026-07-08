@@ -3,7 +3,7 @@ import { ApartmentView } from "./apartment/apartmentView.js";
 import { MarketView } from "./apartment/marketView.js";
 import { ConsoleView } from "./core/consoleView.js";
 import { GigsView } from "./core/gigsView.js";
-import { LogView } from "./core/logView.js";
+import { LogView } from "./core/journalView.js";
 import { SettingsView } from "./core/settingsView.js";
 import { CoreState } from "./core/state.js";
 import { TrainingView } from "./core/trainingView.js";
